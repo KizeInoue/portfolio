@@ -1,0 +1,618 @@
+/* =========================
+   GOTHIC PORTFOLIO
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+    background: #080608;
+    color: #d8cdd8;
+    line-height: 1.7;
+}
+
+/* Gothic background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(90, 0, 100, 0.15), transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(120, 0, 40, 0.1), transparent 35%);
+    z-index: -1;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(8, 6, 8, 0.95);
+    border-bottom: 1px solid #3d163d;
+
+    box-shadow: 0 0 20px rgba(130, 0, 150, 0.15);
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Cinzel', serif;
+    color: #c084d6;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px #8e44ad;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: #b9a6ba;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d58cff;
+    text-shadow: 0 0 10px #a020f0;
+}
+
+/* Mobile menu */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #d58cff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 120px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(8, 6, 8, 0.7),
+            rgba(8, 6, 8, 0.95)
+        ),
+        radial-gradient(
+            circle,
+            #32113a 0%,
+            #0c080d 55%,
+            #050405 100%
+        );
+}
+
+.hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 58px;
+    color: #eee3ef;
+    letter-spacing: 4px;
+    margin: 15px 0;
+
+    text-shadow:
+        0 0 5px #fff,
+        0 0 20px #9b3db5;
+}
+
+.hero h1 span {
+    color: #bd63d7;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 15px auto;
+    font-size: 19px;
+    color: #a99baa;
+}
+
+.welcome {
+    font-family: 'Cinzel', serif;
+    color: #9d55b5 !important;
+    letter-spacing: 5px;
+    font-size: 13px !important;
+}
+
+/* =========================
+   GOTHIC BUTTON
+   ========================= */
+
+.btn,
+.project-card button {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 28px;
+
+    background: #160d18;
+    color: #d994eb;
+
+    border: 1px solid #79378c;
+    border-radius: 2px;
+
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 10px rgba(150, 50, 180, 0.2),
+        inset 0 0 10px rgba(120, 0, 150, 0.1);
+
+    transition: 0.3s;
+}
+
+.btn:hover,
+.project-card button:hover {
+    color: white;
+    background: #32103b;
+
+    border-color: #d06bea;
+
+    box-shadow:
+        0 0 10px #9d3db7,
+        0 0 30px rgba(157, 61, 183, 0.4);
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 110px 25px;
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+
+    color: #d58de7;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 35px;
+
+    text-shadow: 0 0 12px rgba(180, 70, 210, 0.5);
+}
+
+.section h2::before {
+    content: "☩ ";
+    color: #753b80;
+}
+
+.section h2::after {
+    content: " ☩";
+    color: #753b80;
+}
+
+/* =========================
+   PROJECT CARDS
+   ========================= */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    position: relative;
+
+    padding: 35px 25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #140e15,
+            #0b080c
+        );
+
+    border: 1px solid #3a1c40;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(100, 0, 120, 0.05);
+
+    transition: 0.4s;
+}
+
+.project-card::before {
+    content: "✦";
+
+    position: absolute;
+    top: 10px;
+    left: 15px;
+
+    color: #6f347c;
+}
+
+.project-card::after {
+    content: "✦";
+
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+
+    color: #6f347c;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #8f45a3;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(130, 40, 160, 0.25);
+}
+
+.project-card h3 {
+    font-family: 'Cinzel', serif;
+    color: #c878dc;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #988b99;
+}
+
+/* =========================
+   CONTACT
+   ========================= */
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #0e0a0f;
+    color: #ddd;
+
+    border: 1px solid #39203d;
+
+    border-radius: 2px;
+
+    font-family: 'Crimson Text', serif;
+    font-size: 17px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #9e4db5;
+
+    box-shadow:
+        0 0 10px rgba(160, 70, 190, 0.2);
+}
+
+.contact textarea {
+    height: 160px;
+    resize: none;
+}
+
+#formMessage {
+    color: #c778d9;
+    margin-top: 20px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #050405;
+
+    border-top: 1px solid #321737;
+
+    color: #766b77;
+
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+
+        position: absolute;
+        top: 70px;
+        right: 0;
+
+        width: 220px;
+
+        padding: 25px;
+
+        flex-direction: column;
+
+        background: #0b080c;
+
+        border: 1px solid #3d1b42;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#background-video {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+/* Dark overlay */
+body::after {
+    content: "";
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(5, 0, 8, 0.65);
+
+    z-index: -1;
+    pointer-events: none;
+}
+
+.project-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+
+    background: #160d18;
+    color: #d994eb;
+
+    border: 1px solid #79378c;
+    border-radius: 2px;
+
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    color: white;
+    background: #32103b;
+    border-color: #d06bea;
+
+    box-shadow:
+        0 0 10px #9d3db7,
+        0 0 25px rgba(157, 61, 183, 0.4);
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   ABOUT ME CARDS
+   ========================= */
+
+.about-section {
+    max-width: 1100px;
+}
+
+.about-intro {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    color: #a99baa;
+    font-size: 18px;
+}
+
+/* Card container */
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Individual cards */
+.about-card {
+    position: relative;
+
+    padding: 35px 22px;
+
+    min-height: 250px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #160d18,
+            #09070a
+        );
+
+    border: 1px solid #3d1d43;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.6),
+        inset 0 0 20px rgba(130, 40, 160, 0.05);
+
+    transition: 0.4s ease;
+
+    overflow: hidden;
+}
+
+/* Gothic corner decoration */
+.about-card::before {
+    content: "✦";
+
+    position: absolute;
+    top: 8px;
+    left: 12px;
+
+    color: #71367d;
+    font-size: 14px;
+}
+
+.about-card::after {
+    content: "✦";
+
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+
+    color: #71367d;
+    font-size: 14px;
+}
+
+/* Icon */
+.card-icon {
+    font-size: 35px;
+    color: #b95ed0;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 10px #8e3da3,
+        0 0 20px rgba(160, 50, 190, 0.4);
+}
+
+/* Card title */
+.about-card h3 {
+    font-family: 'Cinzel', serif;
+
+    color: #d58de7;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+/* Card text */
+.about-card p {
+    color: #968b98;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.about-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #9147a5;
+
+    background:
+        linear-gradient(
+            145deg,
+            #211024,
+            #0b080d
+        );
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(150, 50, 180, 0.25);
+}
+
+.about-card:hover .card-icon {
+    color: #e69af5;
+
+    text-shadow:
+        0 0 10px #b64fd0,
+        0 0 30px #8e3da3;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-card {
+        min-height: auto;
+    }
+}

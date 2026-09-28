@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+    <source src="C:\Users\pc\Downloads\11.mp4" type="video/mp4">
+</video>
+    <header>
+        <nav>
+            <h2 class="logo">MyPortfolio</h2>
+
+            <ul id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div>
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+            <h1>Hello, I'm <span>Cris Jericho Mendoza</span></h1>
+            <p>
+                I am a student and aspiring web developer who enjoys
+                creating websites and learning new technologies.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
+
+    <!-- About -->
+   <section id="about" class="section about-section">
+
+    <h2>About Me</h2>
+
+    <p class="about-intro">
+        Hi! I'm Your Name. I am a student and aspiring web developer
+        who enjoys creating websites, learning new technologies,
+        and exploring creative ideas.
+    </p>
+
+    <div class="about-cards">
+
+        <!-- Card 1 -->
+        <div class="about-card">
+            <div class="card-icon">✦</div>
+            <h3>My Skills</h3>
+            <p>
+                HTML, CSS, JavaScript, web design,
+                and basic programming. But still into progress
+                of improving myself in this field.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="about-card">
+            <div class="card-icon">☾</div>
+            <h3>My Hobbies</h3>
+            <p>
+                Coding, designing websites, listening
+                to music, gaming, and learning new things.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="about-card">
+            <div class="card-icon">♱</div>
+            <h3>My Goal</h3>
+            <p>
+                To improve my programming skills and
+                create unique and creative websites.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="about-card">
+            <div class="card-icon">✧</div>
+            <h3>My Education</h3>
+            <p>
+                Currently studying and developing my
+                knowledge in technology and web development.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Projects -->
+    <section id="projects" class="section projects">
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+           <div class="project-card">
+    <h3>Project 1</h3>
+
+    <p>
+        My personal HTML and CSS project.
+    </p>
+
+<a href="C:\MENDOZ\mendozaact4/home.html" target="_blank" class="project-btn">
+    View Details
+</a>
+</div>
+
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>A JavaScript project with interactive functions.</p>        
+<a href="C:\MENDOZ\MENDOZA_ACT5/website.html" target="_blank" class="project-btn">
+    View Details
+</a>
+                
+            </div>
+
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>A responsive portfolio website design.</p><a href="C:\MENDOZ\mendozaact4/home.html" target="_blank" class="project-btn">
+    View Details
+</a>
+                
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+
+        <form onsubmit="sendMessage(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <p id="formMessage"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 Cris Jericho Mendoza. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

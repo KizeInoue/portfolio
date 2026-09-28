@@ -1,0 +1,124 @@
+    body{
+    background-color: lightcoral;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 30px 10px;
+    background: var(--teal);
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background:var(--lavender);
+    padding: 12px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0,1);
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: orange;
+    text-decoration: underline;
+
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: var(--light-bg);
+    max-width: 1200px;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+table {
+    width: 70%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0,1);
+}
+
+th {
+    background: var(--teal);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    transition: 0.3s;
+}
+
+tr :hover {
+    background: var(--peach);
+    color: #000;
+}
+section {
+    flex-wrap: wrap;
+    display: flex;
+    flex: 7;
+    background: var(--lavender);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0,1);
+    transition: 0.3s;
+}
+
+aside {
+    flex-wrap: wrap;
+    width: 28%;
+    background-color: lavender;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0,1);
+    transition: 0.3s;
+}
+
+.cons {
+    display: flex;
+    border-radius: 60px;
+}
+
+button:hover {
+    background-color: darkgreen;
+    transform: scale(1.05)
+}
+footer {
+    background-color: bisque;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}

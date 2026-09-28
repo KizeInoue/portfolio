@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background:#f4f4f4;
+}
+
+header {
+    background:#0066cc;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:white;
+    transition: .3s;
+}
+
+nav ul li a:hover {
+    color: yellow;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #87cee8;
+}
+
+.hero button {
+    margin: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #0066cc;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero button:hover {
+    background: #004080;
+    transform: scale(1.1);
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 50px;
+    background: white;
+}
+
+.about img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #0066cc;
+    color:white;
+}
+
+.contact {
+    text-align: center;
+    padding: 50px;
+}
+
+.contact button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #0066cc;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+
+}
+
+.contact button:hover{
+    background: #004080;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
