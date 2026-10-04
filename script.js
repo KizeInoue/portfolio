@@ -96,3 +96,10 @@ if (footer) {
     footer.innerHTML =
         "© " + year + " Your Name. All Rights Reserved.";
 }
+
+const devilButton = document.getElementById("devilButton");
+const devilHorns = document.getElementById("devilHorns");
+
+devilButton.addEventListener("click", function () {
+    devilHorns.classList.toggle("show");
+});
